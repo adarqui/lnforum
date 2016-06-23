@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 ###
 ### Temporary launch script for ln in production
@@ -13,6 +13,8 @@ git_clone_or_pull() {
         (cd "${PREFIX}/$1"; git pull origin master)
     fi
 }
+
+git pull origin master
 
 for repo in ln-api ln-interop ln-lib ln-smf-migration ln-types ln-ui ln-yesod purescript-ln haskell-api-helpers; do
     git_clone_or_pull $repo
