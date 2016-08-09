@@ -44,7 +44,6 @@ packages:
 - '../ln-lib'
 - '../ln-primer'
 - '../ln-sanitize'
-- '../ln-smf-migration'
 - '../ln-types'
 - '../ln-ui-core'
 - '../ln-ui-reactflux'
@@ -66,7 +65,7 @@ packages:
 - '../yesod-auth-oauth2'
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
-extra-deps: [break-1.0.1, fast-tagsoup-1.0.12, random-extras-0.19, react-flux-1.1.1, stm-lifted-0.1.0.0, text-regex-replace-0.1.1.1]
+extra-deps: [break-1.0.1, random-extras-0.19, react-flux-1.1.1, stm-lifted-0.1.0.0]
 
 # Override default flag values for local packages and extra-deps
 flags: {}
