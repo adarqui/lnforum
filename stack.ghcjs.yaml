@@ -14,7 +14,6 @@ setup-info:
 allow-newer: true
 
 packages:
-- location:
 - '.'
 - '../ln-ui-core'
 - '../ln-ui-reactflux'
