@@ -30,6 +30,9 @@ yesod-build-watch-fast:
 yesod-install:
 	stack --stack-yaml stack.yesod.yaml install
 
+yesod-install-watch:
+	stack --stack-yaml stack.yesod.yaml install --file-watch
+
 yesod-clean:
 	stack --stack-yaml stack.yesod.yaml clean
 
@@ -52,7 +55,7 @@ ghcjs-build-web: ghcjs-build
 	# fake min.js just so we don't have to change anything in dev mode
 	cp ../ln-ui-ghcjs/static/dist/all.js ../ln-ui-ghcjs/static/dist/all.min.js
 
-ghcjs-production: build-web
+ghcjs-production: ghcjs-build-web
 	ccjs ../ln-ui-ghcjs/static/dist/all.js --compilation_level=ADVANCED_OPTIMIZATIONS > ../ln-ui-ghcjs/static/dist/all.min.js
 	zopfli -i1000 ../ln-ui-ghcjs/static/dist/all.min.js > ../ln-ui-ghcjs/static/dist/all.min.js.gz
 
