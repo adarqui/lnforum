@@ -41,7 +41,6 @@ packages:
 - '../ln-types'
 - '../haskell-api-helpers-shared'
 - '../haskell-interop-prime'
-- '../haskell-ln-types'
 - '../restyle'
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
