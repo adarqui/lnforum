@@ -17,6 +17,7 @@ packages:
 - location: '.'
 - '../ln-ui-core'
 - '../ln-ui-reactflux'
+- '../ln-ui-ghcjs'
 - '../ln-sanitize'
 - '../ln-validate'
 - '../ln-api-ghcjs'
