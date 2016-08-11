@@ -55,3 +55,26 @@ ghcjs-build-web: ghcjs-build
 ghcjs-production: build-web
 	ccjs ../ln-ui-ghcjs/static/dist/all.js --compilation_level=ADVANCED_OPTIMIZATIONS > ../ln-ui-ghcjs/static/dist/all.min.js
 	zopfli -i1000 ../ln-ui-ghcjs/static/dist/all.min.js > ../ln-ui-ghcjs/static/dist/all.min.js.gz
+
+
+
+interop-build:
+	stack --stack-yaml stack.interop.yaml build -j 8 --fast --no-library-profiling --no-executable-profiling --no-haddock --no-haddock-deps --no-copy-bins --no-test --no-bench --no-reconfigure
+
+interop-build-watch:
+	stack --stack-yaml stack.interop.yaml build -j 8 --fast --no-library-profiling --no-executable-profiling --no-haddock --no-haddock-deps --no-copy-bins --no-test --no-bench --no-reconfigure --file-watch
+
+interop-build-watch-fast:
+	stack --stack-yaml stack.interop.yaml build -j 8 --fast --no-library-profiling --no-executable-profiling --no-haddock --no-haddock-deps --no-copy-bins --no-test --no-bench --no-reconfigure --file-watch --ghc-options -fobject-code
+
+interop-install:
+	stack --stack-yaml stack.interop.yaml install
+
+interop-clean:
+	stack --stack-yaml stack.interop.yaml clean
+
+interop-tests:
+	stack --stack-yaml stack.interop.yaml test --fast
+
+interop-ghci:
+	stack --stack-yaml stack.interop.yaml ghci

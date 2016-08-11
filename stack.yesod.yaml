@@ -37,7 +37,6 @@ resolver: lts-6.5
 # will not be run. This is useful for tweaking upstream packages.
 packages:
 - '.'
-- '.'
 - '../ln-lib'
 - '../ln-sanitize'
 - '../ln-validate'
