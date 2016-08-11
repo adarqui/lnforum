@@ -1,14 +1,45 @@
-build:
-	stack build --fast
+core-build:
+	stack --stack-yaml stack.core.yaml build -j 8 --fast --no-library-profiling --no-executable-profiling --no-haddock --no-haddock-deps --no-copy-bins --no-test --no-bench --no-reconfigure
 
-clean:
-	stack clean
+core-build-watch:
+	stack --stack-yaml stack.core.yaml build -j 8 --fast --no-library-profiling --no-executable-profiling --no-haddock --no-haddock-deps --no-copy-bins --no-test --no-bench --no-reconfigure --file-watch
 
-tests:
-	stack test --fast
+core-install:
+	stack --stack-yaml stack.core.yaml install
 
-ghci:
-	stack ghci
+core-clean:
+	stack --stack-yaml stack.core.yaml clean
+
+core-tests:
+	stack --stack-yaml stack.core.yaml test --fast
+
+core-ghci:
+	stack --stack-yaml stack.core.yaml ghci --main-is ln-api-runner:exe:ln-api-runner-exe
+
+
+
+yesod-build:
+	stack --stack-yaml stack.yesod.yaml build -j 8 --fast --no-library-profiling --no-executable-profiling --no-haddock --no-haddock-deps --no-copy-bins --no-test --no-bench --no-reconfigure
+
+yesod-build-watch:
+	stack --stack-yaml stack.yesod.yaml build -j 8 --fast --no-library-profiling --no-executable-profiling --no-haddock --no-haddock-deps --no-copy-bins --no-test --no-bench --no-reconfigure --file-watch
+
+yesod-build-watch-fast:
+	stack --stack-yaml stack.yesod.yaml build -j 8 --fast --no-library-profiling --no-executable-profiling --no-haddock --no-haddock-deps --no-copy-bins --no-test --no-bench --no-reconfigure --file-watch --ghc-options -fobject-code
+
+yesod-install:
+	stack --stack-yaml stack.yesod.yaml install
+
+yesod-clean:
+	stack --stack-yaml stack.yesod.yaml clean
+
+yesod-tests:
+	stack --stack-yaml stack.yesod.yaml test --fast
+
+yesod-ghci:
+	stack --stack-yaml stack.yesod.yaml ghci
+
+
 
 ghcjs-build:
 	stack --stack-yaml stack.ghcjs.yaml build
