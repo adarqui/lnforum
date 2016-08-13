@@ -81,3 +81,32 @@ interop-tests:
 
 interop-ghci:
 	stack --stack-yaml stack.interop.yaml ghci
+
+
+
+smf-build:
+	brew install icu4c
+	brew link icu4c --force
+	stack --stack-yaml stack.smf.yaml install text-icu --extra-lib-dirs=/usr/local/opt/icu4c/lib --extra-include-dirs=/usr/local/opt/icu4c/include
+	stack --stack-yaml stack.smf.yaml build -j 8 --fast --no-library-profiling --no-executable-profiling --no-haddock --no-haddock-deps --no-copy-bins --no-test --no-bench --no-reconfigure
+
+smf-build-watch:
+	stack --stack-yaml stack.smf.yaml build -j 8 --fast --no-library-profiling --no-executable-profiling --no-haddock --no-haddock-deps --no-copy-bins --no-test --no-bench --no-reconfigure --file-watch
+
+smf-install:
+	stack --stack-yaml stack.smf.yaml install
+
+smf-install-watch:
+	stack --stack-yaml stack.smf.yaml install --file-watch
+
+smf-clean:
+	stack --stack-yaml stack.smf.yaml clean
+
+smf-tests:
+	stack --stack-yaml stack.smf.yaml test --fast
+
+smf-ghci:
+	stack --stack-yaml stack.smf.yaml ghci
+
+smf-clean-redis:
+	redis-cli -p 16379 keys "migrate*" | xargs redis-cli -p 16379 del
