@@ -108,6 +108,9 @@ smf-clean:
 smf-tests:
 	stack --stack-yaml stack.smf.yaml test --fast
 
+smf-tests-watch:
+	stack --stack-yaml stack.smf.yaml test --fast --file-watch
+
 smf-ghci:
 	stack --stack-yaml stack.smf.yaml ghci
 
