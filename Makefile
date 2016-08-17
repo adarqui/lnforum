@@ -13,6 +13,9 @@ core-clean:
 core-tests:
 	stack --stack-yaml stack.core.yaml test --fast
 
+core-tests-watch:
+	stack --stack-yaml stack.core.yaml test --fast --file-watch
+
 core-ghci:
 	stack --stack-yaml stack.core.yaml ghci --main-is ln-api-runner:exe:ln-api-runner-exe
 
