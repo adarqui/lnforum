@@ -35,7 +35,8 @@ packages:
 - '../web-routes' ## <-- remove if PR gets accepted
 
 extra-deps:
+- ghcjs-dom-0.2.4.0
+- html-entities-1.1.2
+- react-flux-1.1.1
 - ref-tf-0.4
 - these-0.6.1.0
-- react-flux-1.1.1
-- ghcjs-dom-0.2.4.0
