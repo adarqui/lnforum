@@ -59,7 +59,7 @@ packages:
 - '../web-routes'
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
-extra-deps: [break-1.0.1, ghcjs-ajax-0.2.0.0, random-extras-0.19, react-flux-1.1.1, stm-lifted-0.1.0.0]
+extra-deps: [break-1.0.1, ghcjs-ajax-0.2.0.0, html-entities-1.1.2, random-extras-0.19, react-flux-1.1.1, stm-lifted-0.1.0.0]
 
 # Override default flag values for local packages and extra-deps
 flags: {}
