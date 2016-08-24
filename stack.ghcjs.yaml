@@ -24,6 +24,8 @@ packages:
 - '../haskell-ln-types'
 - '../haskell-api-helpers-shared'
 - '../haskell-api-helpers-ghcjs'
+- '../haskell-bbcode-parser'
+- '../haskell-bbcode-parser-reactflux'
 - '../haskell-either-helpers'
 - '../haskell-ebyam'
 - '../haskell-rehtie'

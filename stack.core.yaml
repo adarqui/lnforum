@@ -46,6 +46,8 @@ packages:
 - '../ln-validate'
 - '../haskell-api-helpers-shared'
 - '../haskell-api-helpers'
+- '../haskell-bbcode-parser'
+- '../haskell-bbcode-parser-reactflux'
 - '../haskell-ebyam'
 - '../haskell-either-helpers'
 - '../haskell-ifte'
