@@ -62,6 +62,9 @@ ghcjs-production: ghcjs-build-web
 	ccjs ../ln-ui-ghcjs/static/dist/all.js --compilation_level=ADVANCED_OPTIMIZATIONS > ../ln-ui-ghcjs/static/dist/all.min.js
 	zopfli -i1000 ../ln-ui-ghcjs/static/dist/all.min.js > ../ln-ui-ghcjs/static/dist/all.min.js.gz
 
+ghcjs-clean:
+	stack --stack-yaml stack.ghcjs.yaml clean
+
 
 
 interop-build:

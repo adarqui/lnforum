@@ -48,6 +48,8 @@ packages:
 - '../haskell-api-helpers'
 - '../haskell-bbcode-parser'
 - '../haskell-bbcode-parser-reactflux'
+- '../haskell-media-embed'
+- '../haskell-media-embed-reactflux'
 - '../haskell-ebyam'
 - '../haskell-either-helpers'
 - '../haskell-ifte'

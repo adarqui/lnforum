@@ -26,6 +26,8 @@ packages:
 - '../haskell-api-helpers-ghcjs'
 - '../haskell-bbcode-parser'
 - '../haskell-bbcode-parser-reactflux'
+- '../haskell-media-embed'
+- '../haskell-media-embed-reactflux'
 - '../haskell-either-helpers'
 - '../haskell-ebyam'
 - '../haskell-rehtie'
