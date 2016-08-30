@@ -121,3 +121,8 @@ smf-ghci:
 
 smf-clean-redis:
 	redis-cli -p 16379 keys "migrate*" | xargs redis-cli -p 16379 del
+
+
+
+private-upload:
+	rsync -av ../ln-yesod/private/ adarq:projects/leuronet/ln-yesod/private/
