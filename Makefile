@@ -65,6 +65,8 @@ ghcjs-production: ghcjs-build-web
 ghcjs-clean:
 	stack --stack-yaml stack.ghcjs.yaml clean
 
+ghcjs-upload:
+	rsync -av ../ln-ui-ghcjs/static/dist/ adarq:projects/leuronet/ln-ui-ghcjs/static/dist/
 
 
 interop-build:
