@@ -16,7 +16,7 @@ git_clone_or_pull() {
 
 git pull origin master
 
-for repo in ln-api ln-interop ln-lib ln-smf-migration ln-types ln-ui ln-yesod purescript-ln haskell-api-helpers; do
+for repo in ln-api ln-validate ln-sanitize ln-interop ln-lib ln-smf-migration ln-types ln-ui ln-yesod ln-ui-core ln-ui-ghcjs haskell-api-helpers haskell-api-helpers-shared haskell-ln-types haskell-either-helpers haskell-ebyam haskell-rehtie haskell-ifte haskell-bbcode-parser; do
     git_clone_or_pull $repo
 done
 
