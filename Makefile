@@ -48,7 +48,7 @@ yesod-ghci:
 
 
 ghcjs-build:
-	stack --stack-yaml stack.ghcjs.yaml build
+	stack --stack-yaml stack.ghcjs.yaml build --ghc-options -dcore-lint
 
 ghcjs-build-until:
 	until make ghcjs-build; do echo eek; done
