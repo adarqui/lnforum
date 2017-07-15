@@ -14,29 +14,29 @@ setup-info:
 allow-newer: true
 
 packages:
-- '.'
-- '../ln-ui-core'
-- '../ln-ui-reactflux'
-- '../ln-ui-ghcjs'
-- '../ln-sanitize'
-- '../ln-validate'
-- '../ln-api-ghcjs'
-- '../haskell-ln-types'
-- '../haskell-api-helpers-shared'
-- '../haskell-api-helpers-ghcjs'
-- '../haskell-bbcode-parser'
-- '../haskell-bbcode-parser-reactflux'
-- '../haskell-media-embed'
-- '../haskell-media-embed-reactflux'
-- '../haskell-either-helpers'
-- '../haskell-ebyam'
-- '../haskell-rehtie'
-- '../haskell-ifte'
-- '../haskell-web-bootstrap'
-- '../ghcjs-router'
-- '../ghcjs-ajax/ghcjs-ajax'
-- '../react-flux-router'
-- '../web-routes' ## <-- remove if PR gets accepted
+- .
+- ../ln-ui-core
+- ../ln-ui-reactflux
+- ../ln-ui-ghcjs
+- ../ln-sanitize
+- ../ln-validate
+- ../ln-api-ghcjs
+- ../haskell-ln-types
+- ../haskell-api-helpers-shared
+- ../haskell-api-helpers-ghcjs
+- ../haskell-bbcode-parser
+- ../haskell-bbcode-parser-reactflux
+- ../haskell-media-embed
+- ../haskell-media-embed-reactflux
+- ../haskell-either-helpers
+- ../haskell-ebyam
+- ../haskell-rehtie
+- ../haskell-ifte
+- ../haskell-web-bootstrap
+- ../ghcjs-router
+- ../ghcjs-ajax/ghcjs-ajax
+- ../react-flux-router
+- ../web-routes ## <-- remove if PR gets accepted
 
 extra-deps:
 - ghcjs-dom-0.2.4.0

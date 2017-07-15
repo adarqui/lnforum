@@ -126,3 +126,27 @@ smf-clean-redis:
 
 private-upload:
 	rsync -av ../ln-yesod/private/ adarq:projects/leuronet/ln-yesod/private/
+
+
+
+
+# lnotes stuff
+
+ghcjs-lnotes-build:
+	stack --stack-yaml stack.ghcjs.lnotes.yaml build --ghc-options -dcore-lint
+
+ghcjs-lnotes-build-web: ghcjs-lnotes-build
+	find . -name "lnotes-ui-ghcjs-exe.jsexe" -exec rsync -av {}/ ../ln-ui-ghcjs/static/dist/ \;
+	# fake min.js just so we don't have to change anything in dev mode
+	cp ../ln-ui-ghcjs/static/dist/all.js ../ln-ui-ghcjs/static/dist/all.min.js
+
+ghcjs-production: ghcjs-build-web
+	ccjs ../ln-ui-ghcjs/static/dist/all.js --compilation_level=ADVANCED_OPTIMIZATIONS > ../ln-ui-ghcjs/static/dist/all.min.js
+	zopfli -i1000 ../ln-ui-ghcjs/static/dist/all.min.js > ../ln-ui-ghcjs/static/dist/all.min.js.gz
+
+ghcjs-clean:
+	stack --stack-yaml stack.ghcjs.yaml clean
+
+ghcjs-upload:
+	rsync -av ../ln-ui-ghcjs/static/dist/ adarq:projects/leuronet/ln-ui-ghcjs/static/dist/
+

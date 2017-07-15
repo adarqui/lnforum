@@ -36,19 +36,19 @@ resolver: lts-6.12
 # non-dependency (i.e. a user package), and its test suites and benchmarks
 # will not be run. This is useful for tweaking upstream packages.
 packages:
-- '.'
-- '../ln-lib'
-- '../ln-sanitize'
-- '../ln-validate'
-- '../ln-yesod'
-- '../haskell-api-helpers-shared'
-- '../haskell-api-helpers'
-- '../haskell-ebyam'
-- '../haskell-either-helpers'
-- '../haskell-ifte'
-- '../haskell-ln-types'
-- '../haskell-rehtie'
-- '../restyle'
+- .
+- ../ln-lib
+- ../ln-sanitize
+- ../ln-validate
+- ../ln-yesod
+- ../haskell-api-helpers-shared
+- ../haskell-api-helpers
+- ../haskell-ebyam
+- ../haskell-either-helpers
+- ../haskell-ifte
+- ../haskell-ln-types
+- ../haskell-rehtie
+- ../restyle
 # Dependency packages to be pulled from upstream that are not in the resolver
 # (e.g., acme-missiles-0.3)
 extra-deps: [break-1.0.1, ghcjs-ajax-0.2.0.0, html-entities-1.1.2, random-extras-0.19, react-flux-1.1.1, stm-lifted-0.1.0.0]
