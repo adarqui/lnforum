@@ -17,7 +17,7 @@ git_clone_or_pull() {
 
 git pull origin master
 
-for repo in lnforum-api lnforum-validate lnforum-sanitize lnforum-interop ln-lib lnforum-smf-migration lnforum-types ln-ui lnforum-yesod ln-ui-core ln-ui-ghcjs haskell-api-helpers haskell-api-helpers-shared haskell-lnforum-types haskell-either-helpers haskell-ebyam haskell-rehtie haskell-ifte haskell-bbcode-parser; do
+for repo in lnforum-api lnforum-validate lnforum-sanitize lnforum-interop ln-lib ln-smf-migration lnforum-types ln-ui lnforum-yesod ln-ui-core ln-ui-ghcjs haskell-api-helpers haskell-api-helpers-shared haskell-lnforum-types haskell-either-helpers haskell-ebyam haskell-rehtie haskell-ifte haskell-bbcode-parser; do
     git_clone_or_pull $repo
 done
 
