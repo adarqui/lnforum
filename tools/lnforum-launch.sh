@@ -4,7 +4,7 @@
 ### Temporary launch script for ln in production
 ###
 
-PREFIX="/projects/leuronet/lnforum"
+PREFIX="/projects/lnforum"
 mkdir -p ${PREFIX}
 
 git_clone_or_pull() {
