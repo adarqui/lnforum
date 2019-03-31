@@ -8,17 +8,41 @@ PREFIX="/projects/lnforum"
 mkdir -p ${PREFIX}
 
 git_clone_or_pull() {
-    if [ ! -d "${PREFIX}/$1" ] ; then
-        git clone ssh://git@github.com/adarqui/"$1" "${PREFIX}/$1"
-    else
-        (cd "${PREFIX}/$1"; git pull origin master)
-    fi
+  if [ ! -d "${PREFIX}/$1" ] ; then
+    git clone ssh://git@github.com/adarqui/"$1" "${PREFIX}/$1"
+  else
+    (cd "${PREFIX}/$1"; git pull origin master)
+  fi
 }
 
 git pull origin master
 
-for repo in lnforum-api lnforum-validate lnforum-sanitize lnforum-interop ln-lib ln-smf-migration lnforum-types ln-ui lnforum-yesod ln-ui-core ln-ui-ghcjs haskell-api-helpers haskell-api-helpers-shared haskell-lnforum-types haskell-either-helpers haskell-ebyam haskell-rehtie haskell-ifte haskell-bbcode-parser; do
-    git_clone_or_pull $repo
+repos="\
+ lnforum-api \
+ lnforum-api-ghcjs \
+ lnforum-validate \
+ lnforum-sanitize \
+ lnforum-interop \
+ lnforum-lib \
+ lnforum-smf-migration \
+ lnforum-types \
+ lnforum-yesod \
+ lnforum-ui-core \
+ lnforum-ui-reactflux \
+ lnforum-ui-ghcjs \
+ haskell-api-helpers \
+ haskell-api-helpers-shared \
+ haskell-lnforum-types \
+ haskell-either-helpers \
+ haskell-ebyam \
+ haskell-rehtie \
+ haskell-ifte \
+ haskell-bbcode-parser"
+
+mkdir -p "${PREFIX}"
+for repo in $repos; do
+  echo $repo
+  git_clone_or_pull $repo
 done
 
 cd "${PREFIX}/lnforum-yesod"
