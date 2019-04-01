@@ -4,7 +4,7 @@
 ### Temporary launch script for ln in production
 ###
 
-PREFIX="/projects/lnforum"
+PREFIX="//Users/x/code/src/github.com/adarqui/lnforum/"
 mkdir -p ${PREFIX}
 
 git_clone_or_pull() {
