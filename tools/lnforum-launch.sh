@@ -18,26 +18,35 @@ git_clone_or_pull() {
 git pull origin master
 
 repos="\
- lnforum-api \
- lnforum-api-ghcjs \
- lnforum-validate \
- lnforum-sanitize \
- lnforum-interop \
- lnforum-lib \
- lnforum-smf-migration \
- lnforum-types \
- lnforum-yesod \
- lnforum-ui-core \
- lnforum-ui-reactflux \
- lnforum-ui-ghcjs \
- haskell-api-helpers \
- haskell-api-helpers-shared \
- haskell-lnforum-types \
- haskell-either-helpers \
- haskell-ebyam \
- haskell-rehtie \
- haskell-ifte \
- haskell-bbcode-parser"
+  lnforum-api \
+  lnforum-api-ghcjs \
+  lnforum-validate \
+  lnforum-sanitize \
+  lnforum-interop \
+  lnforum-lib \
+  lnforum-smf-migration \
+  lnforum-types \
+  lnforum-types-gen \
+  lnforum-yesod \
+  lnforum-ui-core \
+  lnforum-ui-reactflux \
+  lnforum-ui-ghcjs \
+  haskell-api-helpers \
+  haskell-api-helpers-ghcjs \
+  haskell-api-helpers-shared \
+  haskell-either-helpers \
+  haskell-ebyam \
+  haskell-rehtie \
+  haskell-ifte \
+  haskell-bbcode-parser \
+  haskell-bbcode-parser-reactflux \
+  haskell-media-embed \
+  haskell-media-embed-reactflux \
+  haskell-web-bootstrap \
+  ghcjs-ajax \
+  ghcjs-router \
+  react-flux-router \
+  web-routes"
 
 mkdir -p "${PREFIX}"
 for repo in $repos; do
